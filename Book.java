@@ -68,7 +68,15 @@ class Book
     
     public void setRefNumber(String ref)
     {
-       refNumber = ref;
+        if (ref.length() >= 3)
+        {
+            refNumber = ref;
+        }
+        else
+        {
+            System.out.println("Error: String must consist of " + 
+            "three characters or more");
+        }
     }
     
     public String getrefNumber()
